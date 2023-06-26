@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    i = 0
+    printed = 0
     try:
-        for i in range(0, x):
-            print(f"{my_list[i]}", end='')
-        i = i+1
+        for printed in range(0, x):
+            print("{}".format(my_list[printed]), end='')
+            printed = printed+1
     except:
         pass
     print()
-    return i
+    return printed
