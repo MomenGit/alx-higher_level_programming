@@ -15,7 +15,7 @@ class Square:
     def __init__(self, size=0):
         """Initialize Square"""
 
-        self.__size = size
+        self.size = size
 
     def area(self):
         """Calculate the area of the square"""
