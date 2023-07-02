@@ -17,8 +17,8 @@ class Square:
     def __init__(self, size: int = 0, position: tuple = (0, 0)) -> None:
         """Initialize Square"""
 
-        self.__position = position
-        self.__size = size
+        self.position = position
+        self.size = size
 
     def area(self) -> int:
         """Calculate the area of the square"""
