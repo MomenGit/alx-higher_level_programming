@@ -10,7 +10,7 @@ class Square:
     Attributes:
         size (int): The size of the square
             (defaults to 0 must be positive integer)
-        position (tuple(,)): The (x,y) position of the shape
+        position (tuple): The (x,y) position of the shape
             (defaults to (0,0) must be positive integers)
     """
 
