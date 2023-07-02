@@ -7,11 +7,12 @@ class Square:
 
     Args:
         size (int): The size of the square
+            (defaults to 0 must be positive integer)
+        position (tuple): the (x,y) position of the square
+            (defaults to (0,0) must be positive integers)
     Attributes:
         size (int): The size of the square
-            (defaults to 0 must be positive integer)
-        position (tuple): The (x,y) position of the shape
-            (defaults to (0,0) must be positive integers)
+        position (tuple): The (x,y) position of the square
     """
 
     def __init__(self, size: int = 0, position: tuple = (0, 0)) -> None:
