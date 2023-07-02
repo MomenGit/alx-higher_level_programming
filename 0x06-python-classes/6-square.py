@@ -6,7 +6,7 @@ class Square:
     """Represents a square shape object
 
     Args:
-        __size (int): The size of the square
+        size (int): The size of the square
     Attributes:
         size (int): The size of the square
             (defaults to 0 must be positive integer)
