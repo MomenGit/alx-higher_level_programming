@@ -54,7 +54,7 @@ class Rectangle:
         """Returns a string representation of the rectangle 
            to be able to recreate a new instance by using eval()
         """
-        return f"Rectangle({self.width}, {self.height})"
+        return "Rectangle({}, {})".format(self.width, self.height)
 
     @property
     def width(self) -> int:
