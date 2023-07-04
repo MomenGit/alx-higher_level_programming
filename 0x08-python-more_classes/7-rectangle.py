@@ -48,7 +48,7 @@ class Rectangle:
 
     def __str__(self) -> str:
         """Returns an informal and nicely printable string representation
-           of the rectangle instance, using '#' character.
+           of the rectangle instance, using print_symbol attribute.
            (Returns an empty string on height=0 or width=0)
         """
         rectangle = ''
