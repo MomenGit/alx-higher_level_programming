@@ -56,7 +56,7 @@ class Rectangle:
             return rectangle
         for i in range(self.height):
             rectangle = rectangle + \
-                str(type(self.print_symbol))*self.width+"\n"
+                str(type(self).print_symbol)*self.width+"\n"
         return rectangle.removesuffix('\n')
 
     def __repr__(self) -> str:
