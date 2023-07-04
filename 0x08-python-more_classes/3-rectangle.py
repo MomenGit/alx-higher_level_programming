@@ -32,6 +32,8 @@ class Rectangle:
 
     def __str__(self) -> str:
         rectangle = ''
+        if self.width == 0 or self.height:
+            return rectangle
         for i in range(self.height):
             rectangle = rectangle + "#"*self.width+"\n"
         return rectangle.removesuffix('\n')
