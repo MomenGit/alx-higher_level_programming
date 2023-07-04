@@ -32,11 +32,11 @@ class Rectangle:
         """Calculate the rectangle instance's perimeter
 
         Returns:
-            Rectangle instance's perimeter, given by 2 * height + 2 * width
+            Rectangle instance's perimeter, given by 2 * (height + width)
         """
         if self.width == 0 or self.height == 0:
             return 0
-        return 2*self.height + 2*self.width
+        return 2*(self.height + self.width)
 
     def __str__(self) -> str:
         """Returns an informal and nicely printable string representation
