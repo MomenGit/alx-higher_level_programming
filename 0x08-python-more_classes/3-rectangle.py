@@ -21,16 +21,28 @@ class Rectangle:
         self.width = width
 
     def area(self):
-        """Calculate the rectangle instance's area"""
+        """Calculate the rectangle instance's area
+
+        Returns:
+            Rectangle instance's area, given by height * width
+        """
         return self.height * self.width
 
     def perimeter(self):
-        """Calculate the rectangle instance's perimeter"""
+        """Calculate the rectangle instance's perimeter
+
+        Returns:
+            Rectangle instance's perimeter, given by 2 * height + 2 * width
+        """
         if self.width == 0 or self.height == 0:
             return 0
         return 2*self.height + 2*self.width
 
     def __str__(self) -> str:
+        """Returns an informal and nicely printable string representation
+           of the rectangle instance, using '#' character.
+           (Returns an empty string on height=0 or width=0)
+        """
         rectangle = ''
         if self.width == 0 or self.height == 0:
             return rectangle
