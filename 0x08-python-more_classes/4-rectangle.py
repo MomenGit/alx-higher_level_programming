@@ -51,7 +51,7 @@ class Rectangle:
         return rectangle.removesuffix('\n')
 
     def __repr__(self) -> str:
-        """Returns a string representation of the rectangle 
+        """Returns a string representation of the rectangle
            to be able to recreate a new instance by using eval()
         """
         return "Rectangle({}, {})".format(self.width, self.height)
