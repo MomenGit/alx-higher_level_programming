@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-Defines an add function 
+"""
+Defines an add function
 Adds integers of floats
 otherwise raises TypeError exception
 """
@@ -20,8 +20,3 @@ def add_integer(a, b=98):
     else:
         b = int(b)
     return a + b
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("./tests/0-add_integer.txt", verbose=True)
