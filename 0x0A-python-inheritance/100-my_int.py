@@ -4,4 +4,9 @@
 
 class MyInt(int):
     """Represents a modified int object"""
-    pass
+
+    def __eq__(self, __value: object) -> bool:
+        return super().__ne__(__value)
+
+    def __ne__(self, __value: object) -> bool:
+        return super().__eq__(__value)
