@@ -4,7 +4,12 @@ mod = __import__("7-base_geometry")
 
 
 class Rectangle(mod.BaseGeometry):
-    """Represents a Rectangle Object"""
+    """Represents a Rectangle Object
+
+    Args:
+        width (int): The width of the rectangle instance
+        height (int): The height of the rectangle instance
+    """
 
     def __init__(self, width, height):
         self.integer_validator("width", width)
@@ -18,4 +23,5 @@ class Rectangle(mod.BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        return "[{}] {}/{}".format(self.__class__.__name__, self.__width, self.__height)
+        return "[{}] {}/{}".format(self.__class__.__name__,
+                                   self.__width, self.__height)
