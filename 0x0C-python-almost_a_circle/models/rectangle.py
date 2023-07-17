@@ -40,11 +40,8 @@ class Rectangle(Base):
            of the rectangle instance, using print_symbol attribute.
            (Returns an empty string on height=0 or width=0)
         """
-        rectangle = '\n'*self.y
-        for i in range(self.height):
-            rectangle = rectangle+' '*self.x + '#'*self.width+"\n"
-        rectangle.removesuffix('\n')
-        print(rectangle, end='')
+        print('\n'*self.y+'\n'.join([' '*self.x + '#' *
+              self.width for i in range(self.height)]))
 
     def update(self, *args, **kwargs):
         """Update the class Rectangle that
