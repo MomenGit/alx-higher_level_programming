@@ -39,10 +39,10 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns the dictionary representation of a square instance"""
         self_dict = {}
-        self_dict['x'] = self.x
-        self_dict['y'] = self.y
         self_dict['id'] = self.id
+        self_dict['x'] = self.x
         self_dict['size'] = self.width
+        self_dict['y'] = self.y
         return self_dict
 
     @property
