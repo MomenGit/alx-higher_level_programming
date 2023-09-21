@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-deletes all State objects with a name containing the letter a
-from the database hbtn_0e_6_usa
+lists all State objects, and corresponding City objects,
+contained in the database hbtn_0e_101_usa
 """
 from sqlalchemy import create_engine
 from relationship_state import Base, State
