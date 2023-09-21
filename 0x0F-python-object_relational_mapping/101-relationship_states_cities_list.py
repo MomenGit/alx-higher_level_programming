@@ -12,7 +12,7 @@ import sys
 if __name__ == '__main__':
     if len(sys.argv) != 4:
         sys.exit(
-            "Usage: 100-relationship_states_cities.py <mysql_username> " +
+            "Usage: 101-relationship_states_cities.py <mysql_username> " +
             "<mysql_password> <database_name>")
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -21,7 +21,8 @@ if __name__ == '__main__':
 
     Base.metadata.create_all(engine)
     session = Session(engine)
-    states = session.query(State).order_by(State.id)
+    states = session.query(State).order_by(State.id.asc())
+
     for state in states:
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
