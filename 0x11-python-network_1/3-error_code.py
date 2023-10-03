@@ -1,6 +1,16 @@
 #!/usr/bin/python3
-"""Docs"""
+"""
+sends a request to the URL and
+displays the body of the response (decoded in utf-8)
+"""
 
 if __name__ == '__main__':
-    import urllib
-    pass
+    from urllib import request, error
+    import sys
+
+    req = request.Request(sys.argv[1])
+    try:
+        with request.urlopen(req) as response:
+            print(response.read())
+    except error.URLError as e:
+        print("Error code: {}".format(e.errno))
