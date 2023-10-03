@@ -7,4 +7,4 @@ if __name__ == '__main__':
     print("Body response:")
     print("\t- type: {}".format(type(res.text)))
     print(
-        "\t- content: {}".format('OK' if res.ok else ''))
+        "\t- content: {}".format(res.text))
