@@ -1,14 +1,19 @@
 #!/usr/bin/python3
-"""Docs"""
+"""
+takes your GitHub credentials (username and password) and
+uses the GitHub API to display your id
+"""
 
 if __name__ == '__main__':
     import requests
     import sys
-    headers = {
-        "Authorization": "Bearer {}".format(sys.argv[2]),
-        "X-GitHub-Api-Version": "2022-11-28"
-    }
-    res = requests.get("https://api.github.com/{}".format(sys.argv[1]))
+    from requests.auth import HTTPBasicAuth
+    url = "https://api.github.com/user"
+    username = sys.argv[1]
+    token = sys.argv[2]
+    auth = HTTPBasicAuth(username, token)
+
+    res = requests.get(url, auth=auth)
     try:
         body = res.json()
         print("{}".format(body.get('id')))
