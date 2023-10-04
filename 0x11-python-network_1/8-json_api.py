@@ -19,4 +19,4 @@ if __name__ == '__main__':
         else:
             print("[{}] {}".format(body.get('id'), body.get('name')))
     except Exception as e:
-        print("Not a valid json")
+        print("Not a valid JSON")
