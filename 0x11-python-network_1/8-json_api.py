@@ -7,13 +7,16 @@ with the letter as a parameter
 if __name__ == '__main__':
     import requests
     import sys
-    q = sys.argv[1] if sys.argv[1] is not None else ""
+    if len(sys.argv) >= 2:
+        q = sys.argv[1]
+    else:
+        q = ""
     res = requests.post('http://0.0.0.0:5000/search_user', {'q': q})
     try:
-        json = res.json()
-        if json is None:
+        body = res.json()
+        if len(body) == 0:
             print("No result")
         else:
-            print("[{}] {}".format(json.get('id'), json.get('name')))
+            print("[{}] {}".format(body.get('id'), body.get('name')))
     except Exception as e:
         print("Not a valid json")
