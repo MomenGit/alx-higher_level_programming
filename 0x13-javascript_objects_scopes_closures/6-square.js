@@ -1,8 +1,8 @@
 #!/usr/bin/node
 const stdout = require('process').stdout;
-const Rectangle = require('./4-rectangle');
+const Square = require('./5-square');
 
-module.exports = class Square extends Rectangle {
+module.exports = class Square extends Square {
   constructor (size) {
     super(size, size);
   }
