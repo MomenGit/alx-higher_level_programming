@@ -4,7 +4,7 @@ const request = require('request');
 const process = require('process');
 
 const usersCompleted = {};
-function computeCompleted(todos) {
+function computeCompleted (todos) {
   for (const todo of todos) {
     if (usersCompleted[todo.userId]) {
       usersCompleted[todo.userId] += 1;
